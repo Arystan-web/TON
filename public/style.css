@@ -1,0 +1,16 @@
+:root{
+  --bg: #eaf5ff;
+  --card: #ffffff;
+  --accent: #0077ff;
+  --text: #0b2136;
+  --muted: #567892;
+}
+body{ margin:0; font-family: Inter, Roboto, Arial, sans-serif; background:var(--bg); color:var(--text); }
+.container{ min-height:100vh; display:flex; align-items:center; justify-content:center; padding:20px; }
+.card{ width:100%; max-width:420px; background:var(--card); border-radius:12px; box-shadow:0 6px 24px rgba(3,12,28,0.08); padding:28px; text-align:center; }
+.logo{ font-weight:700; color:var(--accent); font-size:28px; margin-bottom:6px; }
+h1{ margin:4px 0 10px; font-size:20px; }
+p { color:var(--muted); margin:0 0 16px; }
+.btn{ background:linear-gradient(90deg,var(--accent),#2aa0ff); color:white; border:none; padding:12px 18px; border-radius:10px; font-size:16px; cursor:pointer; }
+.btn:active{ transform:translateY(1px); }
+.muted{ color:var(--muted); font-size:13px; margin-top:12px; }
