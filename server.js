@@ -42,10 +42,11 @@ app.post('/api/save-user', (req, res) => {
 // Basic health route
 app.get('/health', (req, res) => res.send('TONMiner OK'));
 
-// Serve
-app.listen(PORT, () => {
-  console.log(`Express server listening on port ${PORT}`);
+// Serve frontend for any unknown route (so "/" and others open index.html)
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
+
 
 // Telegram bot
 if (!BOT_TOKEN) {
